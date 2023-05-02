@@ -16,7 +16,7 @@ web_url=https://wuxin0011.github.io/vuepress2/
 # 项目git 地址
 git_source=https://github.com/wuxin0011/vuepress2
 # 上传分支，如果是 master 请使用 main_branch=master
-main_branch=dev
+main_branch=main
 # 项目打包生成的上传分支
 pages_branch=gh-pages
 # 上传消息
@@ -62,7 +62,7 @@ exec_project(){
    echo "项目打包成功！推送消息到主分支🍝"
  
    # 发布到主分支的消息
-   git add .  2>>$log
+   git add -A  2>>$log
    git commit -m "$git_message"
    git push -f "$git_source" "$main_branch"
    echo "主分支推送成功！进入项目打包目录 🍖"
@@ -74,7 +74,7 @@ exec_project(){
    # 如果是发布到自定义域名
    # echo 'www.example.com' > CNAME
    git init
-   git add .
+   git add -A
    git commit -m "$git_message"
    git push -f "$git_source" "$main_branch:$pages_branch" 2>>$log
 
