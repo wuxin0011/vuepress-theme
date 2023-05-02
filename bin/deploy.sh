@@ -16,7 +16,7 @@ web_url=https://wuxin0011.github.io/vuepress2/
 # 项目git 地址
 git_source=https://github.com/wuxin0011/vuepress2
 # 上传分支，如果是 master 请使用 main_branch=master
-main_branch=main
+main_branch=dev
 # 项目打包生成的上传分支
 pages_branch=gh-pages
 # 上传消息
