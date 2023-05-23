@@ -31,7 +31,7 @@ export default defineUserConfig({
     // configure default theme
     theme: defaultTheme({
         logo: '/logo/logo.png',
-        repo: 'wuxin0011/vuepress-theme',
+        repo: 'wuxin0011/vuepress2',
         docsBranch: 'main',
         docsDir: 'docs',
 
