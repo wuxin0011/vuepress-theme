@@ -31,6 +31,8 @@ git clone https://github.com/wuxin0011/vuepress2
 ```
 
 
+<ToggleColorModeButton/>
+
 ## 运行 打包
 <CodeGroup>
   <CodeGroupItem title="PNPM" active>
@@ -91,3 +93,16 @@ npm run deploy
   </CodeGroupItem>
 </CodeGroup>
 
+
+
+
+
+
+<script>
+  import ToggleColorModeButton from '@theme/ToggleColorModeButton.vue'
+  export default {
+     components:{
+      ToggleColorModeButton
+     }
+  }
+</script>

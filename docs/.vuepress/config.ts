@@ -1,17 +1,20 @@
-import {defineUserConfig, defaultTheme} from 'vuepress'
-import {commentPlugin} from "vuepress-plugin-comment2";
+import { defineUserConfig, defaultTheme } from 'vuepress'
+import { commentPlugin } from "vuepress-plugin-comment2";
 import { copyCodePlugin } from "vuepress-plugin-copy-code2";
 // @ts-ignore
 import { searchPlugin } from '@vuepress/plugin-search'
 // const isProd = process.env?.NODE_ENV === 'production'
+import { path } from '@vuepress/utils'
 
 import head from "./configs/head";
 import navbar from "./configs/nabbar";
 import sidebar from "./configs/sidebar";
 
+console.log('dirname',__dirname)
 export default defineUserConfig({
     // set site base to default value
     base: '/vuepress2/',
+
 
     // extra tags in `<head>`
     head: head,
@@ -48,6 +51,12 @@ export default defineUserConfig({
 
 
     }),
+
+    alias:{
+        '@theme/ToggleColorModeButton.vue':path.resolve(__dirname,'./components/ToggleColorModeButton.vue')
+    },
+
+   
     plugins: [
         searchPlugin({
             locales: {
@@ -74,10 +83,10 @@ export default defineUserConfig({
 
         // 代码复制
         copyCodePlugin({
-            locales:{
-                "/":{
-                    copied:'copy success!',
-                    copy:'click copy'
+            locales: {
+                "/": {
+                    copied: 'copy success!',
+                    copy: 'click copy'
                 }
             }
         })
