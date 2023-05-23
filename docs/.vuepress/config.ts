@@ -10,7 +10,6 @@ import head from "./configs/head";
 import navbar from "./configs/nabbar";
 import sidebar from "./configs/sidebar";
 
-console.log('dirname',__dirname)
 export default defineUserConfig({
     // set site base to default value
     base: '/vuepress2/',
@@ -52,6 +51,7 @@ export default defineUserConfig({
 
     }),
 
+    // 组件重命名，覆盖默认组件
     alias:{
         '@theme/ToggleColorModeButton.vue':path.resolve(__dirname,'./components/ToggleColorModeButton.vue')
     },
